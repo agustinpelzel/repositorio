@@ -1,0 +1,82 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor{
+    display: grid;
+    width: 100%;
+    min-height: 100vh;
+
+    grid-gap: 8px;
+
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 400px 1fr 200px ;
+
+    grid-template-areas: 
+        "celeste celeste celeste"
+        "verde rojo amarillo"
+        "verde rojo amarillo"
+    ;  
+
+}
+
+.celeste{
+    grid-area: celeste;
+    background-color: aqua;
+}
+.verde{
+    grid-area: verde;
+    background-color: rgb(10, 165, 20);
+}
+.rojo{
+    grid-area: rojo;
+    background-color: rgb(233, 23, 23);
+}
+.amarillo{
+    grid-area: amarillo;
+    background-color: rgb(255, 235, 9);
+}
+
+@media (min-width: 600px) and (max-width:900px){
+
+    .contenedor{
+        display: grid;
+        width: 100%;
+        min-height: 100vh;
+    
+        grid-gap: 8px;
+    
+        grid-template-rows: 100px 200px 1fr;
+        grid-template-columns: 60% 40%;
+    
+        grid-template-areas: 
+            "celeste celeste"
+            "verde verde"
+            "rojo amarillo"
+        ;  
+    
+    }
+}
+@media (max-width:600px){
+
+    .contenedor{
+        display: grid;
+        width: 100%;
+        min-height: 100vh;
+    
+        grid-gap: 8px;
+    
+        grid-template-rows: 100px 200px 200px 1fr;
+        grid-template-columns: 100%;
+    
+        grid-template-areas: 
+            "celeste"
+            "verde"
+            "rojo"
+            "amarillo"
+        ;  
+    
+    }
+}
